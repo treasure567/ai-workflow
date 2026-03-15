@@ -32,3 +32,12 @@ worker
 # Editor/IDE
 # .idea/
 # .vscode/
+
+# Rust / Cargo
+passman/target/
+
+# Tauri
+passman/node_modules/
+
+# macOS
+.DS_Store

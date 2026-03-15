@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Passman</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="app">
+    <div class="sidebar">
+      <div class="sidebar-header">
+        <h2>Stored Passwords</h2>
+        <button id="btn-refresh" class="btn-refresh" title="Refresh entries">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M14 2v4h-4"/>
+            <path d="M2 14v-4h4"/>
+            <path d="M13.5 6A6 6 0 0 0 3.3 3.3L2 6"/>
+            <path d="M2.5 10a6 6 0 0 0 10.2 2.7L14 10"/>
+          </svg>
+        </button>
+      </div>
+      <div class="search-bar">
+        <input type="text" id="search-input" placeholder="Search entries...">
+      </div>
+      <ul id="entry-list"></ul>
+      <button id="btn-add">+ Add New</button>
+    </div>
+    <div class="main-panel" id="main-panel">
+      <p class="placeholder">Select an entry or add a new one.</p>
+    </div>
+  </div>
+
+  <div id="notification" class="notification hidden"></div>
+
+  <div id="modal-overlay" class="modal-overlay hidden">
+    <div class="modal">
+      <p id="modal-message"></p>
+      <div class="modal-actions">
+        <button id="modal-cancel" class="btn-modal btn-modal-cancel">Cancel</button>
+        <button id="modal-confirm" class="btn-modal btn-modal-confirm">Delete</button>
+      </div>
+    </div>
+  </div>
+
+  <div id="loading-overlay" class="loading-overlay hidden">
+    <div class="spinner"></div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
